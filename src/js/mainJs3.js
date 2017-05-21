@@ -24,44 +24,48 @@ Point.prototype.add=function (otherPoint)
 {
     this.x+=otherPoint.x;
     this.y+=otherPoint.y;
-    return console.log(`Point(${this.x},${this.y})`);
 };
 Point.prototype.subtract=function (otherPoint)
 {
     this.x-=otherPoint.x;
     this.y-=otherPoint.y;
-    return console.log(`Point(${this.x},${this.y})`);
 };
 Point.prototype.getX=function ()
 {
-    return console.log(this.x);
+    return this.x;
 };
 Point.prototype.getY=function ()
 {
-    return console.log(this.y);
+    return this.y;
 };
 Point.prototype.equals=function (otherPoint)
 {
     if ((this.x===otherPoint.x)&&(this.x===otherPoint.x))
     {
-        return console.log(true);
+        return true;
     }
-    return console.log(false);
+    return false;
 };
 Point.prototype.toString=function ()
 {
-    return console.log(`Point{x=${this.x}, y=${this.y}}`);
+
+    return "Point{x="+this.x+"," +"y="+this.y+"}";
 };
 Point.prototype.valueOf=function ()
 {
-    return console.log(this.x+this.y);
-}
+    return this.x+this.y;
+};
 var a = new Point(10,5);
 var b = new Point(10,5);
+
 a.add(b);
+console.log(a.x,a.y);
 a.subtract(b);
-b.getX();
-b.getY();
-a.equals(b);
-a.toString();
-b.valueOf();
+console.log(a.x,a.y);
+console.log(a.getX());
+console.log(a.getY());
+console.log(a.equals(b));
+console.log(a.toString());
+console.log(b.toString());
+console.log(b.valueOf());
+console.log(a.valueOf());
